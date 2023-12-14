@@ -19,6 +19,6 @@
                 <constraints nullable="false"/>
             </column>
         </createTable>
-        <sqlFile dbms="mysql" path="db/0000000-DML.sql" />
+        <sqlFile dbms="mysql,h2" path="db/0000000-DML.sql" />
     </changeSet>
 </databaseChangeLog>

@@ -1,4 +1,4 @@
-INSERT INTO sweet.products (description, price, quantity, sku, title)
+INSERT INTO products (description, price, quantity, sku, title)
 VALUES ('Description very descriptive', 100, 25, 'qawer44', 'Prod 1'),
        ('Description very descriptive', 120, 15, 'qawe44r', 'Prod 2'),
        ('Description very descriptive', 85, 35, 'q4we44r', 'Prod 3'),
