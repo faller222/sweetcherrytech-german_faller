@@ -1,10 +1,16 @@
 import React, {useState} from "react";
+import {useDispatch} from "react-redux";
 import {CssBaseline, Grid, TextField, Button} from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import Box from '@mui/system/Box';
 
+import {getProducts} from "../store/productSlice";
+
 
 const SearchBar = () => {
+
+    const dispatch = useDispatch();
+
     const [title, setTitle] = useState("");
     const [minPrice, setMinPrice] = useState(0);
     const [maxPrice, setMaxPrice] = useState(1000);
@@ -15,7 +21,7 @@ const SearchBar = () => {
             <CssBaseline/>
             <Box sx={{p: 2, border: '1px dashed grey'}}>
                 <Grid container spacing={2}>
-                    <Grid item xs={12} sm={6}>
+                    <Grid item xs={12} sm={5}>
                         <TextField
                             fullWidth
                             label="Título"
@@ -49,9 +55,13 @@ const SearchBar = () => {
                             }}
                         />
                     </Grid>
-                    <Grid item xs={12} sm={2}>
+                    <Grid item xs={12} sm={3}>
                         <Button sx={{height: "100%"}} fullWidth variant="outlined"
-                                startIcon={<SearchIcon/>}>Primary</Button>
+                                startIcon={<SearchIcon/>}
+                                onClick={() => {
+                                    dispatch(getProducts({title, minPrice, maxPrice, page: 0, size: 10}));
+                                }}
+                        >Buscar</Button>
                     </Grid>
                 </Grid>
             </Box>
