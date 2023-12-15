@@ -24,3 +24,4 @@ http://3.147.58.115:8080/products
 - 2 Horas - End to end del metodo getProducts; problemas con lombok, no generaba codigo. 
 - 2 Horas - Configurando liquibase & h2 , batallando con los perfiles (test, produccion), Unit/Integration test
 - 1 Hora  - Despliegue en AWS, configurando regla de TCP
+- 4 horas - Frontend: redux, Material UI.
